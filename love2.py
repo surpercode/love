@@ -289,7 +289,20 @@ Wenjing, now is the magic time''')
 			i += 1
 
 def show_love():
-	print ('\033[1;31;47m' + mylove)
+	lines = mylove.split('\n')
+	for i, line in enumerate(lines):
+		if 0<= i <= 24:
+			time.sleep(0.1 * random.random())
+			print ('\033[1;36;47m' + line)
+		elif 25 <= i <= 35:
+			time.sleep(0.1 * random.random())
+			print ('\033[1;34;47m' + line)
+		elif 36 <= i <= 47:
+			time.sleep(0.2 * random.random())
+			print ('\033[1;31;47m' + line)
+		else:
+			time.sleep(0.1 * random.random())
+			print ('\033[1;36;47m' + line)
 
 print ('''This is a love travel when you start it, many intresting outputs will be a surprise to you!
 Now, GO!!!''')
